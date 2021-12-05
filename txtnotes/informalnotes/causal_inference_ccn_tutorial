@@ -1,0 +1,27 @@
+How to discovery causal relationship?
+	_a...
+	... Choose the simpler model. E.g. no-biforking; just more frequently seen relations?
+		_example_ Non additive noise model. "If Y = f(x) + Noise and noise is independent of X, then more likely X->Y. Justification: P(cause) and P(effect|cause) more likely to be independent."
+			_example_ Inferring deterministic causality where you have y=f(x): then P(x) is indep from peak of f(x) (aka f'), but p(y)~f'.
+	... Using statistical independency and dependency. (is there a step-by-step guide line, what to check?)
+		_example_ given stim S and observed neural activities X and Y. No action intervention involved. finding: X not indep S, Y not indep S, but S indep Y | X. Then there's no confounding and X has to be the cause of Y.
+			_example_ In a neural imaging scenario, X could be the direct encoding then Y being indirect encoding. Other non-encoding variables ("brain areas") are blocked away for explaining Y although they could be the decoders if dependence detected.
+	... confounding-robust independent component analysis. Assuming	linear Non-Gaussian Acyclic model (identify this specific causal structure). "X = B*X + S => solve B if X is not Gaussian -- otherwise the causal direction is not unique" 
+		_@me what are the examples: how would you interpret B at all? ***
+	end_
+What are the errors people can make?
+	_a...
+	... Collapsing micro variables into a macro level then only analyzing on the macro level (e.g. electrode signal is macro summation of brain events but this summation may have lost information).
+	... Missing hidden confoundings. TOBECOMPARED: ways of analyzing fMRI data. anything special?
+	end_
+How is causality diff from normal probabilistic models?
+	_a_ P(D|pars), we can perform a whole set of interventions for pars (controlling some and moving others)
+
+Algorithmic information theory ~ statistics: replace komogorov complexity (About encoding lengths) with shannon entropy. If two strings (two variables) share very high mutual information then they are dependent.
+	_generalize_ I(x,y|z) ~ x,y indep of z.
+	_ How is it different from just talking about probability?
+		_a_ when you change the coding scheme the mutual info can also change.
+			_example_ X and Y both are a 1M bits binary string and they are identical. Therefore their mutual info will be ~ 1M (because encoding them together is short), they seem like dependent. But if you know a simple compression for this string (e.g. this number is pi), then I(x,y) is much smaller and they are less likely to be dependent. 
+
+TO look into: algorithmic model of causality (think about what are the practical implications...or even design an experiment?); what does ica do (math)? causal pairs collection for better understanding; 
+Take away: practical procedure, to study S->X->Y instead of S->Y.

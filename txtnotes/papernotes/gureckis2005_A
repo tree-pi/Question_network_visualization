@@ -1,0 +1,30 @@
+What is the to be explained?
+	_a_ modeling human sequence learning.
+		_ What are the paradigms?
+			_a...
+			... Serial reaction time(SRT). "participants are asked to respond to a fixed set of stimuli and each cue signals a different button press need to be made. Unknow to participants the stimuli transition may follow some regularity. This regularity can be implicitly learned, indicated by decreased reaction time."
+			... Statistical word learning.
+			end_
+
+What is the model?
+	_specification...
+	... How is the stimuli represented?
+		_a_ A shift register memory encoding each step a vector with N entries(N=total possible event) and together forming a NxP matrix.
+			_@me how is P decided?
+	... How is response made?
+		_a_ Each response corresponds to a detector with an activation level determined by a weighted sum with all records in the memory but an exponential decay rate to weight more on the more recent events. Activation converted to outcome ranged 0-1. Response follow a probability distribution based on the outcome.
+			_@me What is the intuition behind this weighted sum calculation?
+				_a_@me if a squared decay is used instead of exponential, any N-gram can be achieved. using a fixed decay rate for exponential also assumes some periodic regularity. because the detector matrix is so big, nearly any pattern can be learned.
+	... What is the learning algorithm? 
+		_a_ Delta rule update factor times the original factor and consider the transformation (activation->outcome). Learning rate and decay rate is fixed.
+			_@me How could it possibly work that decay rate is fixed across all different tasks?
+	end_
+
+How well does the model describe the behavioral data?
+	_ How well does it describe SRT?
+		_a_ It could even replicate the Lee 1997 with a rule of "visit all elements in the set for every 6 elements", where participants show decreased RT in every 6 element period. 
+			_ How is the model able to achieve this?
+				_a_ Looking at the weight matrix of detectors, the repetition of same item is strongly prohibited.
+	_ How well does it describe statistical word learning?
+		_a_ Yes it can recognize regularties in words compared to random syllabus.
+

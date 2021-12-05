@@ -1,0 +1,28 @@
+How do people deal with the dillema of exploration and exploitation in a changing environment?
+	_ How does the neural system control the exploration-exploitation trade-off?
+		_a_@prev modulated by neuromodulatory locus coeruleus–norepinephrine (LC–NE) system.
+			_ What is the specific process?
+				_a_@prev Adaptive gain theory. The phasic mode of LC works on exploitation and tonic mode encourages exploration. "The phasic mode produces selective increases in neuronal responsivity in response to task-related stimuli, thereby optimizing performance in the current task (i.e., exploitation).  In contrast, the tonic mode produces a more enduring and less discriminative increase in neuronal responsivity... it facilitates the disengagement of attention from this task and the processing of other non- task-related stimuli and/or behaviors (i.e., exploration)... Ventral and medial frontal structures drives the transition between tonic and phasic modes according to calculated long-term utility."
+					_comment_@me Note the exploration is defined as disengagement from one target (not neccesarily action or policy).
+					_ What are the supports for this theory?
+						_ What are the computational models?
+							_a_@prev Usher et al., 1999.
+						_ what are the neural data?
+							_a_ For monkey in relatively simple tasks (Aston-Jones & Cohen, 2005).
+							_ For human, how to find evidence with non-invasive method?
+								_hypothesis_ Using pupil dialation in a bandit task will track the exploration-exploitation trade-off. 
+									_ What is the task?
+									_ What is the result?
+										_ How well does the pupil dialation tracks exploration or exploitation decisions?
+											_operationalize...
+											... How to classify if one choice is exploratory or exploitative?
+												_a_ Using a mean-tracking rule to estimate pay off of each bandit, then characterize a choice as exploration if it's not the maximum estimated payoff.
+													_@me how to tell this model-induced maximum payoff agrees with participants' judgement?
+											... How to measure the pupil dialation?
+												_a_ average the pupil data in the period from 2.5 to 0.5 sec before the keypress as baseline.
+													_ Why not the 
+											end_
+											
+
+
+

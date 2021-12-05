@@ -1,0 +1,12 @@
+1. Why do people feel suspense?
+2. What is the hypothesis? 
+    _answer_ Suspense is derived from expected belief update (aka how likely your belief will change in the near future and how much).
+    _ What is the quantitative model implementing this hypothesis?
+        _ What are the input to the model?
+        _ What are the parameters?
+3. What are the empirical observation?
+    _ What are the intuitive examples?
+    _ What are the rigorous experimental evidences?
+        _ What is a lab paradigm to test the hypothesis?
+4. Is the hypothesis good at explaining the empirical observation?
+

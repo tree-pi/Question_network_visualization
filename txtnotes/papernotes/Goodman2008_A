@@ -1,0 +1,33 @@
+How do people learn concepts by inferring the rules of categorization?
+	_ What is the problem setting?
+		_a_ examples with features (binary or continuous numbers) and a label.
+			_ What is the scale of problem?
+				_specify...
+				... How many features?
+				... How many labels?
+				end_
+	_ What is the learning algorithm?
+		_ How to represent the mapping from features to labels?
+			_a_ Based on logic rules.
+				_ How to generate rules (since there's infinite amount of possible rules)?
+					_a_ context-free “disjunctive normal form”(DNF) grammar which is able to generate any logical expression (with conditions, conjunctions and disjunctions).
+						_challenge_@me This grammar cannot express all possible logical boundaries? Are those weird classifications just unatural and never appear in real life?
+		_ How to learn the mapping rules given examples?
+			_a_ Using Bayesian inference.
+				_ How to get probability distribution of rule formulae which are all discrete?
+					_a_ Assigning probabilities for each production (same level productions normalized to 1).
+						_ How to decide the exact values for production probability?
+							_a_@me fit to human data to decide...
+							_a_ Use a uniform distribution of this parameter, then marginalize out to get prior for formula.
+				_ How to get the posterior given examples and a specific rule?
+					_ How to deal with outliers?
+						_a_ The more outliers given formula, the less likely, plus a prior probability of outliers (how to decide on that? free parameter?)
+				_ How to select the best rule among all the rules?		
+
+
+	_ How well does the model explain behavioral data?
+		_ Does it explain human response in lab experiments?
+		_ Does it explain naturalistic categorization data?
+
+	_ Can this model be generalized to other problems?
+		_a_@[P]Piantadosi2016_logical richer logical theories (Kemp et al. 2008a; Kemp, 2012), as well as conceptual domains like magne- tism (Ullman et al., 2012), semantic hierarchies (Katz, Goodman, Kersting, Kemp, & Tenenbaum, 2008), number concepts (Piantadosi, Tenenbaum, & Goodman, 2012), and function words (Piantadosi, Goodman, & Tenenbaum, 2014).

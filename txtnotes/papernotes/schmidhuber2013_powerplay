@@ -1,0 +1,23 @@
+What is the goal?
+	_a_ to make the algorithm able to generate new tasks for itself.
+What is the algorithm?
+	_ How to know it is time to generate the new task?
+		_a_ When able to solve the current task. "Efficiency: When the solver can solve the task with limited coding length and computational time; Success (in decision-making or state-action kinda setting): When the 'trace'(including state, action, reward and state transition) satisfies certain requirement."
+	_ How to invent a new interesting task?
+		_a_ The new task could be making the solver able to solve at least one old task more efficiently.
+		_example_ In case of robotic movement learning, the new task can be modifying the target of movement (edit the target string).
+			_@me How to get the space of all valid targets (or reward requirement)?
+			
+		_ How to judge the interestingness of a task?
+			_a_ not cared...
+	_ How to search for the task solution?
+		_a_ Modify based on the solution from the last iteration (to ensure old problems can still be solved?).
+	_ How to make sure that learning the new task is not forgetting old task (real generalization instead of changed specification)?
+		_a_ Just check if old task can still be solved aka "correctness demonstration check". The check can be performed based on recorded history.
+			_@me How many checks do you need? Exhaustive??
+
+What are the example systems?
+	_ How are their performance (compared to other solvers trained with single task)?
+		_ to read...
+	_ Do they generate surprisingly interesting new tasks?
+

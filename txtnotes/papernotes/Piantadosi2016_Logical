@@ -1,0 +1,15 @@
+How to empirically decide the set of primitives to construct hypothesis space (Language of Thought, LOT)?
+	_ What is the problem setting?
+		_a_ Learn to categorize a shape 108 concepts that were hand-chosen to span a wide range of boolean, quantification and relational (to other items in the set) operations.
+	_ What is the learning algorithm?
+		_ How to represent the mapping from features to labels?
+			_a_ Different sets are used. 
+		_ How to learn the mapping rules given examples?
+		_ How to infer model parts from empirical data?
+	_ What is the behavioral data?
+		_ What are behavioral patterns looked in a model-free way?
+			_a...
+			... Some concepts are harder to learn than others. "complex is harder than simple; or is harder than and; reference in different domains is harader than same; non-booleans are easy!"
+			... People always make similar mistakes.
+			end_
+		_ How well does the model describe the data?

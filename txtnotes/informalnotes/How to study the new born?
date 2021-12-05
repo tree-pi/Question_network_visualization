@@ -1,0 +1,30 @@
+How to study the new born's development?
+	_ what are the common barriers?
+		_a_@JustinWood noisy measurements of new borns; hard to control the environment; lack the computational models.
+	_ What is the advantage of using newborn chicks?
+		_a_@JustinWood Their experience can be controlled directly; similar cortical circuits and similar cognitive capacities with human. [really? curiosity-driven learning for chicks?]
+		_ What is the environment setting?
+			_ What are the other sensory inputs -- are they controlled?
+				_a_ No
+			_ Do chicks interact with the environment?
+				_a_ yes, not directly but their actions will cause the scene changes.
+		_ What is the data you get from this exp setting?
+			_a_ Automatic record of position, view points, action, etc.
+		_ What are the results?
+			_ What can the chicks do?
+				_ What to probe?
+					_a... 
+					... imprinting: all chicks cluster together.
+					... one-shot transfer learning.
+					... object permanance.
+						_ Can we manipulate the visual experiences to see if still the chicks show the object permanance?
+							_a_ yes, if the chick only sees discrete movement not smooth movement.
+					end_
+	_ How to design AI to mimic these chicks?
+		_a_ three components: visual processing (DNN), memory (experience replay), curiosity-driven learning.
+			_ What behaviors to test on the AIs?
+				_a...
+				... imprinting behavior. (most likely driven by the curiosity-motivated learning)
+				... attention to objects.
+				end_s
+
